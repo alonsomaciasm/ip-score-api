@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-08-16T14:20:08Z",
+  "single_request_performance": {
+    "samples": 100,
+    "mean_ms": 82.52,
+    "p50_ms": 6.17,
+    "p95_ms": 607.3,
+    "p99_ms": 875.61,
+    "recommendation_distribution": {
+      "block": 30,
+      "allow": 60,
+      "flag": 10
+    },
+    "signal_distribution": {
+      "recent_threat_activity": 30,
+      "active_phishing_host": 30,
+      "tor_exit_list": 18,
+      "known_proxy_range": 18,
+      "subnet_cluster_hostile": 6,
+      "abuse_blocklist_listed": 6,
+      "cdn_edge_egress": 12,
+      "datacenter_asn": 10,
+      "verified_search_engine_bot": 5
+    }
+  },
+  "batch_performance": {
+    "batches": 30,
+    "batch_size": 25,
+    "total_evaluated": 750,
+    "avg_batch_latency_ms": 18.1,
+    "throughput_ips_per_sec": 1381.07
+  }
+}

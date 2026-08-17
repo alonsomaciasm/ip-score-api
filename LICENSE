@@ -1,0 +1,110 @@
+MIT License
+
+Copyright (c) 2026 MC. José Alonso Macías Montoya / Universidad Politécnica de Chiapas
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice, this permission notice, and the following conditions
+shall be included in all copies or substantial portions of the Software:
+
+1. ATRIBUCIÓN DE AUTORÍA: En caso de utilizar, modificar, publicar o redistribuir 
+   este código o API en otros proyectos académicos, comerciales o de software libre, 
+   se solicita mantener la debida mención o atribución de autoría al MC. José Alonso 
+   Macías Montoya y a la Universidad Politécnica de Chiapas.
+
+2. CUMPLIMIENTO LFPDPPP (MÉXICO) Y PROTECCIÓN DE DATOS: Esta API ha sido diseñada 
+   bajo arquitectura Stateless (Sin Persistencia) y PII-Zero. Todo el procesamiento de datos 
+   se efectúa en memoria volátil únicamente durante el ciclo de solicitud/respuesta. 
+   Cualquier persona física o moral que despliegue o aloje esta API hacia terceros 
+   asume de forma exclusiva el carácter de "Responsable del Tratamiento de Datos Personales" 
+   en apego a la LFPDPPP y disposiciones del INAI.
+
+3. DESLINDE DE RESPONSABILIDAD: El autor (MC. José Alonso Macías Montoya) y la 
+   Universidad Politécnica de Chiapas quedan completamente liberados de cualquier 
+   responsabilidad legal, civil, administrativa, penal o comercial derivada del uso, 
+   mal uso, almacenamiento indebido o tratamiento no autorizado de información que 
+   realicen terceros utilizando esta herramienta.
+
+4. ATRIBUCIÓN Y LICENCIAS DE FUENTES DE INTELIGENCIA Y RECURSOS DE TERCEROS:
+   Esta aplicación integra y/o consume los siguientes conjuntos de datos de ciberinteligencia 
+   y componentes de software de código abierto bajo sus respectivas licencias permisivas:
+
+    a) Tor Project Exit List & Relay Consensus (Tor Exits / Relays):
+       - Mantenedor: The Tor Project, Inc.
+       - Enlace: https://check.torproject.org/torbulkexitlist & https://onionoo.torproject.org/
+       - Licencia: Dominio Público / BSD License.
+       - Uso: Identificación in-memory de nodos de salida y nodos de retransmisión (Guard/Middle) de la red Tor.
+
+    b) GreenSnow Dynamic Proxies & Threat Feed:
+       - Mantenedor: GreenSnow Project.
+       - Enlace: https://blocklist.greensnow.co/
+       - Licencia: Licencia Abierta para Ciberdefensa Automatizada y Prevención de Ataques.
+       - Uso: Identificación in-memory de proxies dinámicos y hosts atacantes activos.
+
+    c) Team Cymru Fullbogons List:
+      - Mantenedor: Team Cymru.
+      - Enlace: https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt
+      - Licencia: Términos Abiertos de Ciberdefensa Operacional.
+      - Uso: Filtrado in-memory de subredes no asignadas por IANA (Spoofing).
+
+   d) Abuse.ch Botnet C2 (Feodo Tracker & ThreatFox):
+      - Mantenedor: abuse.ch.
+      - Enlace: https://feodotracker.abuse.ch/ & https://threatfox.abuse.ch/
+      - Licencia: Creative Commons CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
+      - Uso: Identificación in-memory de servidores de Comando y Control (C2) de Botnets activos.
+
+   d) OpenPhish Community Feed & PhishTank (Cisco Talos):
+      - Mantenedor: OpenPhish & PhishTank / Cisco Talos.
+      - Enlace: https://openphish.com/ & https://www.phishtank.com/
+      - Licencia: Licencia Abierta para Ciberdefensa y Prevención de Fraude.
+      - Uso: Detección in-memory de hosts y servidores albergando sitios de phishing activos.
+
+   e) IPsum Aggregated Threat Feed:
+      - Mantenedor: Stamparm.
+      - Enlace: https://github.com/stamparm/ipsum
+      - Licencia: MIT License (Copyright (c) Stamparm).
+      - Uso: Consolidación de direcciones IP maliciosas y reputación de abuso de red.
+
+   f) Spamhaus DROP / EDROP Blocklists:
+      - Mantenedor: The Spamhaus Project.
+      - Enlace: https://www.spamhaus.org/drop/
+      - Licencia: Uso Gratuito Automatizado para Ciberdefensa de SOC / Redes.
+      - Uso: Identificación in-memory de rangos de abuso y secuestro de subredes.
+
+   g) FireHOL Level 1 Blocklist:
+      - Mantenedor: FireHOL Project.
+      - Enlace: https://iplists.firehol.org/
+      - Licencia: Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA 4.0).
+      - Uso: Filtrado in-memory de proxies abiertos y anonimizadores.
+
+   h) Cloud & Datacenter Ranges (AWS, GCP, Azure, Oracle OCI, DigitalOcean, Alibaba Aliyun, Tencent Cloud, Vultr, FireHOL Datacenter):
+      - Mantenedores: Amazon Web Services, Google LLC, Microsoft Corporation, Oracle Corporation, DigitalOcean LLC, Alibaba Group, Tencent Holdings, Vultr / Constant Co, FireHOL Project.
+      - Licencias: Distribución Oficial Libre / Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA 4.0).
+      - Uso: Clasificación in-memory de subredes e infraestructura Cloud, Datacenters y VPS a nivel mundial.
+
+   i) MaxMind GeoLite2 ASN Database:
+      - Mantenedor: MaxMind, Inc.
+      - Enlace: https://www.maxmind.com
+      - Licencia: MaxMind GeoLite2 EULA.
+      - Uso: Resolución in-memory de Número de Sistema Autónomo (ASN) e ISP.
+
+   j) Google Fonts (Inter, Outfit, JetBrains Mono):
+      - Licencia: SIL Open Font License 1.1 / Apache License 2.0.
+      - Uso: Presentación gráfica y tipografía en el Dashboard UI de monitoreo.
+
+   k) Frameworks y Librerías Backend (FastAPI, Starlette, Pydantic, Uvicorn, Redis, netaddr, PyJWT, APScheduler, SlowAPI, Structlog, Prometheus Client):
+      - Licencia: MIT License / BSD License / Apache License 2.0.
+      - Uso: Servidor web asíncrono, motor de matching en memoria, caché PII Zero, validación JWT y telemetría de métricas.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
