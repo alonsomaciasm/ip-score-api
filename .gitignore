@@ -1,0 +1,83 @@
+# ==============================================================================
+# IP Reputation Score API - Git Ignore Rules
+# ==============================================================================
+
+# --- Environment & Secret Configuration ---
+.env
+*.env
+!.env.example
+*.pem
+*.key
+*.crt
+
+# --- Virtual Environments & Dependencies ---
+.venv/
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Python Bytecode, Compilations & Cache Directories ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.coverage.*
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+
+# --- Dynamic Threat Feeds, Binary MMDB Databases & Runtime Cache ---
+data/feeds/*
+!data/feeds/.gitkeep
+data/mmdb/*
+!data/mmdb/.gitkeep
+data/logs/*
+!data/logs/.gitkeep
+*.log
+*.mmdb
+*.tar.gz
+*.gz
+*.zip
+
+# --- IDEs, Editors, OS Files & Agent Artifacts ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.antigravity/
+.gemini/
+.agent/
+.agents/
+*.tmp
+*.bak
+
+# --- Temporary Data Exports, Scratch Files & Drafts ---
+tmp/
+temp/
+scratch/
+*.csv
+!app/static/*
+docs/scientific_article*
+scientific_article*.md
+paper_experiments/
+

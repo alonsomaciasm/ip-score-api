@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ip-score-api"
+version = "1.0.0"
+description = "Production-grade IP Reputation Score API following PII Zero, Security by Design, and Privacy by Design"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.28.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.2.0",
+    "redis>=5.0.0",
+    "maxminddb>=2.6.0",
+    "netaddr>=1.2.0",
+    "httpx>=0.27.0",
+    "apscheduler>=3.10.4",
+    "structlog>=24.1.0",
+    "prometheus-client>=0.20.0",
+    "slowapi>=0.1.9"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1.0",
+    "pytest-asyncio>=0.23.0",
+    "httpx>=0.27.0"
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
