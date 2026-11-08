@@ -81,3 +81,6 @@ docs/scientific_article*
 scientific_article*.md
 paper_experiments/
 
+paper_experiments.zip
+scripts/benchmark_scientific_study.py
+docs/scientific_benchmark_results.json
